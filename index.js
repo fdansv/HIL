@@ -27,9 +27,10 @@ app.get('/hil/*/*/*\.png', function (req, res) {
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.strokeStyle = 'rgba(255,255,255,0.2)'
   ctx.moveTo(0, 0)
-  ctx.lineTo(256, 256)
-  ctx.moveTo(256, 0)
-  ctx.lineTo(0, 256)
+  ctx.lineTo(0, 255)
+  ctx.lineTo(255, 255)
+  ctx.lineTo(255, 0)
+  ctx.lineTo(0, 0)
   ctx.stroke()
   canvas.pngStream().pipe(res)
 });
