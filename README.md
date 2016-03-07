@@ -7,3 +7,17 @@ Fortunately, all the stuff I work on in [CartoDB](https://github.com/cartodb) is
 Except for basemaps. And I **really** need those basemaps to have an idea of where I am.
 
 *Help Me I'm Lost (HIL)* is a sort of map server that generates super-barebones png tiles so that I can work offline with basemaps.
+
+**Installation**
+
+HIL needs cairo to work
+
+```
+brew install cairo
+```
+
+After that, just `npm install` and...
+
+```
+node index
+```
