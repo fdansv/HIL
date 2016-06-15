@@ -5,11 +5,11 @@ var Canvas = require('canvas')
 app.get('/hil/*/*/*\.png', function (req, res) {
   var tilePoint = {zoom: req.params[0], x: req.params[1], y: req.params[2]}
   var tileBB = {
-        n: tile2lat(tilePoint.y, tilePoint.zoom),
-        s: tile2lat(tilePoint.y + 1, tilePoint.zoom),
-        e: tile2lon(tilePoint.x, tilePoint.zoom),
-        w: tile2lon(tilePoint.x + 1, tilePoint.zoom)
-      } 
+    n: tile2lat(tilePoint.y, tilePoint.zoom),
+    s: tile2lat(tilePoint.y + 1, tilePoint.zoom),
+    e: tile2lon(tilePoint.x, tilePoint.zoom),
+    w: tile2lon(tilePoint.x + 1, tilePoint.zoom)
+  } 
   res.setHeader('Content-Type', 'image/png')
   var Image = Canvas.Image
   var canvas = new Canvas(256, 256)
